@@ -1,0 +1,357 @@
+<html>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #121212;
+        }
+        
+        header {
+            background-color: #272727;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+        .container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF9A00;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .logotip {
+            display: flex;
+            align-items: center;
+        }
+
+        .logotip img {
+            height: 100px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+            
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        } 
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .h1{
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+        }
+    
+        .kyrs h1{
+            text-align: center;
+            color: white;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .kyrs img{
+            height: 400px;
+            text-align: center;
+            border: 4px solid #FFC873;
+        }
+
+        /*Конкурс*/
+        .competition-section {
+            padding: 60px 0;
+        }
+            
+        .competition-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+            
+        .competition-title {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 15px;
+        }
+            
+        .competition-image {
+            width: 80%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .competition-main h2{
+            margin-bottom: 30px;
+        }
+            
+        .competition-main {
+            color: white;
+            flex: 2;
+            margin-left: 120px;
+        }
+            
+        .competition-description {
+            margin-bottom: 10px;
+            color: white;
+            line-height: 1.8;
+        }
+            
+        .competition-sidebar {
+            width: 20%;
+            max-height: 300px;
+            margin-left: 120px;
+            margin-top: 50px;
+        }
+            
+        .competition-info {
+            background-color: #272727;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+            
+        .info-title {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+            
+        .info-item {
+            margin-bottom: 15px;
+        }
+            
+        .info-label {
+            color: white;
+            margin-bottom: 5px;
+        }
+            
+        .info-value {
+            color: white;
+            font-weight: bold;
+        }
+            
+        .rating-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+            
+        .rating-stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+            
+        .rating-value {
+            font-weight: bold;
+            color: white;
+        }
+            
+
+
+        /* Подвал сайта */
+        footer {
+            background-color: #121212;
+            padding: 60px 0 30px;
+            color: #b0b0b0;
+        }
+            
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+            
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+            
+        .footer-logo img {
+            height: 150px;
+            margin-right: 10px;
+
+        }
+            
+        .footer-contact {
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+            
+        .footer-contact a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+            
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+            
+        .footer-links ul {
+            list-style: none;
+            float: left;
+        }
+            
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+            
+        .footer-links a {
+            color: #b0b0b0;
+            transition: color 0.3s;
+        }
+            
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+            
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+    </style>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logotip">
+                        <img src="https://i.pinimg.com/736x/7e/bf/0b/7ebf0b3a20514f12ad94337ffe80e9d1.jpg">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="competition.html">Конкурсы</a></li>
+                            <li><a href="schedule.html">Расписание</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--Конкурс-->
+        <section class="competition-section">
+            <div class="container">
+                <div class="competition-header">
+                    <h1 class="competition-title">Ice-crem Party в Британской школе</h1>
+                    <img src="https://th.bing.com/th/id/OIP.rOgyEBV40ja0jDDxpfD7HgHaHa?r=0&rs=1&pid=ImgDetMain" class="competition-image">
+                </div>
+                    <div class="competition-main">
+                        <h2>Описание конкурса</h2>
+                        <p class="competition-description">
+                            Ice-cream Party в Британской школе
+                        </p>
+                        <p class="competition-description">
+                            Завершаем учебный год и встречаем лето, дегустируя и наслаждаясь разнообразием вкусов самого любого десерта! Узнаем новые слова, играем, мастерим и учимся покупать мороженое на английском. Это нельзя пропустить!
+                        </p>
+                        <p class="competition-description">
+                            Для детей от 7 до 10 лет.
+                        </p>
+                        <p class="competition-description">
+                            Стоимость: 1600 рублей
+                        </p>
+                        <p class="competition-description">
+                            Напоминаем: участие бронируется только по предварительной записи и оплате. Возможен зачет бонусных баллов.
+                        </p>
+                        <p class="competition-description">
+                            Подробности уточняйте у менеджера студии по тел. 8(964) 084-23-41
+                        </p>
+                    </div>
+                
+                    
+                    <div class="competition-sidebar">
+                        <div class="competition-info">
+                            <h3 class="info-title">Информация</h3>
+                            <div class="info-item">
+                                <div class="info-label">Дата:</div>
+                                <div class="info-value">8 июля 2024 г.</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Время:</div>
+                                <div class="info-value">14:25 - 16:45</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Участвует:</div>
+                                <div class="info-value">65 человек</div>
+                            </div>
+                            <div class="rating-container">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="rating-value">4.5/5</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Подвал сайта -->
+        <footer id="contacts">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <div class="footer-contact">
+                            Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                        </div>
+                        <div class="footer-contact">
+                            Email: <a href="mailto:HELLO@school.ru">HELLO@school.ru</a>
+                        </div>
+                    </div>
+
+                     <div class="footer-logo">
+                        <img src="https://i.pinimg.com/736x/2a/3a/fc/2a3afcb7403faf7ee375051008a12f7f.jpg">
+                    </div>
+
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="index-light.html">Главная-светлая</a></li>
+                            <li><a href="registration.html">Регистрация</a></li>
+                            <li><a href="competition.html">Конкурс</a></li>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
