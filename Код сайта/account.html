@@ -1,0 +1,519 @@
+<html>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #121212;
+        }
+        
+        header {
+            background-color: #272727;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+        .container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF9A00;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .logotip {
+            display: flex;
+            align-items: center;
+        }
+
+        .logotip img {
+            height: 100px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+            
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        } 
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .h1{
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+        }
+    
+        .kyrs h1{
+            text-align: center;
+            color: white;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .kyrs img{
+            height: 400px;
+            text-align: center;
+            border: 4px solid #FFC873;
+        }
+
+            /* Акаунт */
+            .account-section {
+                padding: 60px 0;
+                min-height: calc(100vh - 150px);
+            }
+            
+            .account-container {
+                max-width: 800px;
+                margin: 6 auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+            }
+            
+            .account-title {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 32px;
+                color: #ffffff;
+            }
+
+
+            /* Профиль */
+            .profile-card {
+                flex: -1.7;
+                height: 250px;
+                min-width: 100px;
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .profile-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+            
+            .profile-avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: #333;
+                margin-right: 20px;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                color: #FFC873;
+            }
+            
+            .profile-info h3 {
+                font-size: 22px;
+                margin-bottom: 5px;
+                color: white;
+            }
+            
+            .profile-info p {
+                color: white;
+            }
+            
+            .profile-details {
+                margin-top: 20px;
+            }
+            
+            .detail-item {
+                margin-bottom: 15px;
+            }
+            
+            .detail-label {
+                color: white;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            
+            .detail-value {
+                color: white;
+                font-size: 16px;
+            }
+            
+            /* Запись на конкурс */
+            .booking-form {
+                flex: -1;
+                min-width: 100px;
+                height: 500px;
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .form-title {
+                text-align: center;
+                font-size: 22px;
+                margin-bottom: 25px;
+                color: white;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-label {
+                display: block;
+                margin-bottom: 8px;
+                color: #b0b0b0;
+            }
+            
+            .form-input, .form-select {
+                width: 100%;
+                padding: 12px 15px;
+                background-color: #333;
+                border: 1px solid #444;
+                border-radius: 5px;
+                color: #ffffff;
+                font-size: 16px;
+            }
+            
+            .form-input:focus, .form-select:focus {
+                outline: none;
+                border-color: #FFC873;
+            }
+            
+            .form-row {
+                display: flex;
+                gap: 15px;
+            }
+            
+            .form-row .form-group {
+                flex: 1;
+            }
+            
+            .submit-btn {
+                background-color: #FFC873;
+                color: #A66400;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100%;
+                margin-top: 80px;
+            }
+            
+            .submit-btn:hover {
+                background-color: #fcbb5a;
+            }
+            
+            /* Записи */
+            .bookings-list {
+                width: 38%;
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                flex: -1;
+                height: 208px;
+                margin-top: -250px;
+                
+            }
+            
+            .bookings-title {
+                text-align: center;
+                font-size: 22px;
+                margin-bottom: 25px;
+                color: white;
+            }
+            
+            .booking-item {
+                background-color: #252525;
+                border-radius: 5px;
+                padding: 15px;
+                margin-bottom: 15px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            
+            .booking-info {
+                flex: 1;
+                min-width: 200px;
+            }
+            
+            .booking-name {
+                font-size: 18px;
+                color: #ffffff;
+                margin-bottom: 5px;
+            }
+            
+            .booking-meta {
+                color: #b0b0b0;
+                font-size: 14px;
+            }
+            
+            .booking-actions {
+                display: flex;
+                align-items: center;
+            }
+            
+            .cancel-btn {
+                background-color: #cf6679;
+                color: #121212;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            .cancel-btn:hover {
+                background-color: #ba1a37;
+            }
+
+
+
+        /* Подвал сайта */
+        footer {
+            background-color: #121212;
+            padding: 60px 0 30px;
+            color: #b0b0b0;
+        }
+            
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+            
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+            
+        .footer-logo img {
+            height: 150px;
+            margin-right: 10px;
+
+        }
+            
+        .footer-contact {
+                margin-top: 40px;
+                margin-bottom: 5px;
+        }
+            
+        .footer-contact a {
+                color: #b0b0b0;
+                transition: color 0.3s;
+        }
+            
+            .footer-contact a:hover {
+                color: #ffffff;
+            }
+            
+            .footer-links ul {
+                list-style: none;
+                float: left;
+            }
+            
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+            
+            .footer-links a {
+                color: #b0b0b0;
+                transition: color 0.3s;
+            }
+            
+            .footer-links a:hover {
+                color: #ffffff;
+            }
+            
+            .footer-bottom {
+                text-align: center;
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #333;
+            }
+    </style>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logotip">
+                        <img src="https://i.pinimg.com/736x/7e/bf/0b/7ebf0b3a20514f12ad94337ffe80e9d1.jpg">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                            <li><a href="competition.html">Конкурсы</a></li>
+                            <li><a href="schedule.html">Расписание</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
+                            <li><a href="registration.html">Выход</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--Акаунт-->
+        <section class="account-section">
+            <div class="container">
+                <h1 class="account-title">Личный кабинет</h1>
+            
+                <div class="account-container">
+                    <!-- Блок профиля -->
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar" style="background-image: url('https://cdn-icons-png.flaticon.com/512/2479/2479902.png');">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Людмила</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Email:</div>
+                                <div class="detail-value">Lida456@msi.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Запись на конкурс -->
+                    <div class="booking-form">
+                        <h2 class="form-title">Запись на конкурс</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="competition" class="form-label">Конкурс*</label>
+                                <select id="competition" class="form-select" required>
+                                    <option value="">Выберите конкурс</option>
+                                    <option value="1">Ice-crem Party</option>
+                                    <option value="2">Spring creativity</option>
+                                    <option value="3">My English Videos</option>
+                                    <option value="4">My English Stories</option>
+                                    <option value="5">My English Classroom</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date" class="form-label">Дата*</label>
+                                <input type="text" id="date" class="form-input" value="8 июля 2025" readonly>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="time" class="form-label">Время*</label>
+                                    <select id="time" class="form-select" required>
+                                        <option value="">Выберите время</option>
+                                        <option value="9:00">9:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="people" class="form-label">Количество человек*</label>
+                                    <input type="number" id="people" class="form-input" min="1" max="10" value="1" required>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Записаться</button>
+                        </form>
+                    </div>
+                    
+
+                    <div class="bookings-list">
+                        <h2 class="bookings-title">Ближайшие записи</h2>
+                        
+                        <div class="booking-item">
+                            <div class="booking-info">
+                                <div class="booking-name">Творческий конкурс "My English Stories"</div>
+                                <div class="booking-meta">8 июля 2025, 14:25  -  2 участника</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подвал сайта -->
+        <footer id="contacts">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <div class="footer-contact">
+                            Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                        </div>
+                        <div class="footer-contact">
+                            Email: <a href="mailto:HELLO@school.ru">HELLO@school.ru</a>
+                        </div>
+                    </div>
+
+                     <div class="footer-logo">
+                        <img src="https://i.pinimg.com/736x/2a/3a/fc/2a3afcb7403faf7ee375051008a12f7f.jpg">
+                    </div>
+
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="index-light.html">Главная-светлая</a></li>
+                            <li><a href="registration.html">Регистрация</a></li>
+                            <li><a href="competition.html">Конкурс</a></li>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
