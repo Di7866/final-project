@@ -1,0 +1,1040 @@
+<html>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #FFF7E8;
+        }
+        
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+        .container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF9A00;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .logotip {
+            display: flex;
+            align-items: center;
+        }
+
+        .logotip img {
+            height: 100px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+            
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        } 
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .darc {
+            background: #444;
+            border: 5px solid #444;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left:auto;
+        }
+
+        .h1{
+            margin-top: 30px;
+            text-align: center;
+        }
+    
+        .kyrs h1{
+            text-align: center;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .kyrs img{
+            height: 400px;
+            text-align: center;
+            border: 4px solid #FFC873;
+        }
+
+        /*О нас*/
+        .about {
+            padding: 60px 0;
+        }
+            
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            }
+            
+        .about-image {
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border: 10px solid #FFC873;
+            border-radius: 9px;
+            margin-right: 40px;
+            }
+            
+        .about-content {
+                flex: 1;
+            }
+            
+        .about-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            }
+            
+        .about-text {
+            color: #121212;
+            margin-bottom: 20px;
+        }
+
+        .start-free {
+            background: #FFC873;
+            border: 5px solid #FFC873;
+            border-radius: 9px;
+            font-size: 16px;
+            margin-left:auto;
+        }
+        
+        .start-free a{
+            color: #A66400;
+        }
+
+
+
+        /* Популярные конкурсы */
+            .slider-section {
+                padding: 60px 0;
+            }
+            
+            .slider-title {
+                color: #121212;
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 32px;
+            }
+            
+            .slider-container {
+                position: relative;
+                max-width: 1200px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            
+            .slider {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+            
+            .slide {
+                min-width: 100%;
+                padding: 0 20px;
+            }
+            
+            .slide-content {
+                background-color: #FFEDCD;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .slide-image {
+                height: 300px;
+                background-color: #FFEDCD;
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .slide-details {
+                padding: 20px;
+                color: #121212;
+
+            }
+            
+            .slide-description {
+                margin-bottom: 15px;
+                color: #121212;
+            }
+            
+            .slide-rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+            
+            .stars {
+                color: #ffc107;
+                margin-right: 10px;
+            }
+            
+            .slide-button {
+                display: inline-block;
+                background-color: #FFC873;
+                color: #A66400;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+            
+            .slide-button:hover {
+                background-color: #FFC873;
+            }
+            
+            .slider-controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
+            .slider-dots {
+                display: flex;
+            }
+            
+            .dot {
+                width: 12px;
+                height: 12px;
+                background-color: #D9D9D9;
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+            
+            .dot.active {
+                background-color: #FFC873;
+            }
+
+
+            /* Приветствие от организации */
+            .greeting-section {
+                padding: 60px 0;
+                background-color: #ffffff;
+            }
+            
+            .greeting-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .greeting-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+                color: #121212;
+            }
+            
+            .greeting-video {
+                width: 100%;
+                height: 450px;
+                background-color: #FFEDCD;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #b0b0b0;
+                font-size: 18px;
+            }
+
+
+             /*Конкурсы*/
+            .competitions-section {
+                padding: 60px 0;
+            }
+            
+            .competitions-title {
+                text-align: center;
+                font-size: 32px;
+                margin-bottom: 40px;
+                color: #121212;
+            }
+            
+            .competitions-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .competition-card {
+                background-color: #FFEDCD;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s;
+            }
+            
+            .competition-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .competition-image {
+                height: 200px;
+                background-color: #333;
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .competition-details {
+                padding: 20px;
+            }
+            
+            .competition-name {
+                font-size: 20px;
+                margin-bottom: 10px;
+                color: #121212;
+            }
+            
+            .competition-description {
+                color: #121212;
+                margin-bottom: 15px;
+            }
+            
+            .competition-meta {
+                display: flex;
+                justify-content: space-between;
+                color: #121212;
+                margin-bottom: 15px;
+            }
+            
+            .competition-button {
+                display: block;
+                text-align: center;
+                background-color: #FFC873;
+                color: #A66400;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+            
+            .competition-button:hover {
+                background-color: #FFC873;
+            }
+
+
+            /*Поиск*/
+            .search-section {
+                padding: 40px 0;
+            }
+            
+            .search-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .search-title {
+                text-align: center;
+                font-size: 28px;
+                margin-bottom: 20px;
+                color: #121212;
+            }
+            
+            .search-form {
+                display: flex;
+            }
+            
+            .search-input {
+                flex: 1;
+                padding: 15px;
+                background-color: #FFFFFF;
+                border: 1px solid #FFC873;
+                border-radius: 5px 0 0 5px;
+                color: #ffffff;
+                font-size: 16px;
+            }
+            
+            .search-input:focus {
+                outline: none;
+                border-color: #FFC873;
+            }
+            
+            .search-button {
+                background-color: #FFC873;
+                color: #A66400;
+                border: none;
+                padding: 0 25px;
+                border-radius: 0 5px 5px 0;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            .search-button:hover {
+                background-color: #FFC873;
+            }
+
+            /*Авторизация*/
+            .auth-section {
+                display: flex;
+                align-items: center;
+                padding: 60px 0;
+                background-color: #FFFFFF;
+            }
+            
+            .auth-container {
+                max-width: 500px;
+                padding: 30px;
+                border-radius: 10px;
+                background-color: #FFEDCD;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                margin-left: 60%;
+                height: 340px;
+                margin-top: -210px;
+            }
+
+            .free-class{
+                margin-top: 30px;
+                color: #121212;
+                margin-left: 5%;
+                
+            }
+
+            .free-class2{
+                color: #121212;
+                margin-left: 5%;
+            }
+            
+            .auth-title {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 28px;
+                color: #121212;
+            }
+            
+            .auth-form .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .auth-form label {
+                display: block;
+                margin-bottom: 8px;
+                color: #121212;
+            }
+            
+            .auth-form input {
+                width: 100%;
+                padding: 12px 15px;
+                background-color: #ffffff;
+                border: 1px solid #444;
+                border-radius: 5px;
+                color: #121212;
+                font-size: 16px;
+            }
+            
+            .auth-form input:focus {
+                outline: none;
+                border-color: #FFC873;
+            }
+            
+            .auth-actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 25px;
+            }
+            
+            .auth-button {
+                background-color: #FFC873;
+                color: #A66400;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            .auth-button:hover {
+                background-color: #FFC873;
+            }
+            
+            .auth-link {
+                color: #121212;
+                align-self: center;
+            }
+
+
+            /*Отзывы*/
+            .reviews-section {
+                padding: 60px 0;
+            }
+            
+            .reviews-title {
+                text-align: center;
+                font-size: 32px;
+                margin-bottom: 40px;
+                color: #121212;
+            }
+            
+            .reviews-slider {
+                position: relative;
+                max-width: 400px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            
+            .reviews-track {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+            
+            .review {
+                min-width: 100%;
+                padding: 0 20px;
+            }
+            
+            .review-content {
+                background-color: #FFEDCD;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .review-header {
+                display: flex;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .review-avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                right: 20px;
+                background-size: cover;
+                margin-left: 90px;   
+
+            }
+            
+            .review-author {
+                text-align: center;
+                font-size: 20px;
+                color: #121212;
+            }
+            
+            .review-date {
+                color: #D9D9D9;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+            
+            .review-text {
+                text-align: center;
+                color: #121212;
+                margin-bottom: 20px;
+                font-style: italic;
+            }
+            
+            .review-link {
+                float: right;
+                color: #A66400;
+            }
+            .data{
+                color: #A66400;
+            }
+            
+            .reviews-dots {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            
+            .reviews-dot {
+                width: 12px;
+                height: 12px;
+                background-color: #D9D9D9;
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+            
+            
+            .reviews-dot.active {
+                background-color: #FFC873;
+            }
+
+
+            /*Подписка*/
+            .subscribe-section {
+                padding: 60px 0;
+                background-color: #FFFFFF;
+            }
+            
+            .subscribe-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 40px;
+                background-color: #FFEDCD;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .subscribe-title {
+                text-align: center;
+                font-size: 28px;
+                margin-bottom: 30px;
+                color: #121212;
+            }
+            
+            .subscribe-form .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .subscribe-form label {
+                display: block;
+                margin-bottom: 8px;
+                color: #121212;
+            }
+            
+            .subscribe-form input {
+                width: 100%;
+                padding: 12px 15px;
+                background-color: #FFFFFF;
+                border: 1px solid #121212;
+                border-radius: 5px;
+                color: #ffffff;
+                font-size: 16px;
+            }
+            
+            .subscribe-form input:focus {
+                outline: none;
+                border-color: #FFC873;
+            }
+            
+            .subscribe-checkbox {
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+            }
+            
+            .subscribe-checkbox input {
+                width: auto;
+                margin-right: 10px;
+            }
+            
+            .subscribe-checkbox label {
+                margin-bottom: 0;
+                color: #121212;
+            }
+            
+            .subscribe-button {
+                display: block;
+                width: 100%;
+                background-color: #FFC873;
+                color: #A66400;
+                border: none;
+                padding: 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            
+            .subscribe-button:hover {
+                background-color: #FFC873;
+            }
+            
+            /* Подвал сайта */
+            footer {
+                background-color: #FFF7E8;
+                padding: 60px 0 30px;
+                color: #b0b0b0;
+            }
+            
+            .footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                margin-top: 50px;
+            }
+            
+            .footer-logo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            
+            .footer-logo img {
+                height: 150px;
+                margin-right: 10px;
+
+            }
+            
+            .footer-contact {
+                margin-top: 40px;
+                margin-bottom: 5px;
+            }
+            
+            .footer-contact a {
+                color: #b0b0b0;
+                transition: color 0.3s;
+            }
+            
+            .footer-contact a:hover {
+                color: #ffffff;
+            }
+            
+            .footer-links ul {
+                list-style: none;
+                float: left;
+            }
+            
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+            
+            .footer-links a {
+                color: #b0b0b0;
+                transition: color 0.3s;
+            }
+            
+            .footer-links a:hover {
+                color: #ffffff;
+            }
+            
+            .footer-bottom {
+                text-align: center;
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #272727;
+            }
+
+    </style>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logotip">
+                        <img src="https://i.pinimg.com/736x/09/a7/bf/09a7bffed72b6e3e9e569b62b69c522e.jpg">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="registration.html">Регистрация</a></li>
+                            <li><a href="#authorization">Авторизация</a></li>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="competition.html">Конкурсы</a></li>
+                            <li><a href="#search">Поиск</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
+                            <li><button class="darc"><a href="index.html">Тёмная тема</a></button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <h1 class="h1">Курсы английского</h1>
+        <div class="kyrs">
+            <h1>языка для дошкольников</h1>
+            <center><img src="https://th.bing.com/th/id/OIP.jE8ghSJd-MXuFfPeBT-YBwHaE8?r=0&w=424&h=283&rs=1&pid=ImgDetMain"></center>
+        </div>
+        
+        <!--О нас-->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-image" style="background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/female-teacher-with-students-8709447-7112062.png?f=webp');"></div>
+                    <div class="about-content">
+                        <h2 class="about-title">О нас</h2>
+                        <p class="about-text">Старт обучения языку для детей с 3-х лет. Научим ребёнка читать, писать и говорить по-английски, подготовим к школе, сформируем коммуникативные навыки со сверстниками и взрослыми.</p>
+                        <button class="start-free"><a href="#start-free">Начать бесплатно</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Популярные конкурсы-->
+        <section class="slider-section">
+            <div class="container">
+                <h2 class="slider-title">Популярные конкурсы</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-image" style="background-image: url('https://th.bing.com/th/id/OIP.rOgyEBV40ja0jDDxpfD7HgHaHa?r=0&rs=1&pid=ImgDetMain');"></div>
+                                <div class="slide-details">
+                                    <h3>Ice-crem Party в Британской школе</h3>
+                                    <p class="slide-description">Завершаем учебный год и встречаем лето, дегустируя и наслаждаясь разнообразием вкусов самого любого десерта! Узнаем новые слова, играем, мастерим и учимся покупать мороженое на английском. Это нельзя пропустить!</p>
+                                    <div class="slide-rating">
+                                        <span class="stars">★★★★☆</span>
+                                        <span>4.5/5</span>
+                                    </div>
+                                    <a href="competition.html" class="slide-button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-image" style="background-image: url('https://th.bing.com/th/id/OIP.13OrQoy0hv0ojhxc0IarbwHaE8?r=0&w=1820&h=1214&rs=1&pid=ImgDetMain');"></div>
+                                <div class="slide-details">
+                                    <h3>Творческий конкурс "Spring creativity"</h3>
+                                    <p class="slide-description">Создайте свою собственную работу на тему "Spring creativity" и выиграйте приз!</p>
+                                    <div class="slide-rating">
+                                        <span class="stars">★★★★★</span>
+                                        <span>4.6/5</span>
+                                    </div>
+                                    <a href="competition.html" class="slide-button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Приветствие от организации -->
+        <section class="greeting-section">
+            <div class="container">
+                <div class="greeting-container">
+                    <h2 class="greeting-title">Приветствие от организации</h2>
+                    <div class="greeting-video">
+                        <iframe src="https://vkvideo.ru/video-93570758_456243049?ref_domain=vk.com" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Конкурсы-->
+        <section class="competitions-section" id="contests">
+            <div class="container">
+                <h2 class="competitions-title">Конкурсы</h2>
+                <div class="competitions-grid">
+                    <div class="competition-card">
+                        <div class="competition-image" style="background-image: url('https://th.bing.com/th/id/OIP.rOgyEBV40ja0jDDxpfD7HgHaHa?r=0&rs=1&pid=ImgDetMain');"></div>
+                        <div class="competition-details">
+                            <h3 class="competition-name">Ice-crem Party в Британской школе</h3>
+                            <p class="competition-description">Завершаем учебный год и встречаем лето, дегустируя и наслаждаясь разнообразием вкусов мороженого! Узнаем новые слова.</p>
+                            <div class="competition-meta">
+                                <span>Участников: 65</span>
+                                <span>Рейтинг: 4.5</span>
+                            </div>
+                            <a href="competition.html" class="competition-button">Участвовать</a>
+                        </div>
+                    </div>
+                    <div class="competition-card">
+                        <div class="competition-image" style="background-image: url('https://th.bing.com/th/id/OIP.13OrQoy0hv0ojhxc0IarbwHaE8?r=0&w=1820&h=1214&rs=1&pid=ImgDetMain');"></div>
+                        <div class="competition-details">
+                            <h3 class="competition-name">Творческий конкурс "Spring creativity"</h3>
+                            <p class="competition-description">На творческий конкурс принимаются творческие работы учащихся: рисунки, плакаты, проекты, и.т.д.</p>
+                            <div class="competition-meta">
+                                <span>Участников: 88</span>
+                                <span>Рейтинг: 4.6</span>
+                            </div>
+                            <a href="competition.html" class="competition-button">Участвовать</a>
+                        </div>
+                    </div>
+                    <div class="competition-card">
+                        <div class="competition-image" style="background-image: url('https://idsch.id/wp-content/uploads/2023/07/Featured-Image-idsch.id-2023-07-23T201319.777.png');"></div>
+                        <div class="competition-details">
+                            <h3 class="competition-name">Конкурс видеороликов "My English Videos"</h3>
+                            <p class="competition-description">На творческий конкурс принимаются творческие работы учащихся: рисунки, плакаты, проекты, и.т.д.</p>
+                            <div class="competition-meta">
+                                <span>Участников: 23</span>
+                                <span>Рейтинг: 3.9</span>
+                            </div>
+                            <a href="competition.html" class="competition-button">Участвовать</a>
+                        </div>
+                    </div>
+                    <div class="competition-card">
+                        <div class="competition-image" style="background-image: url('https://th.bing.com/th/id/OIP.P0qsfnS1xczgZPveQ7RouAAAAA?r=0&rs=1&pid=ImgDetMain');"></div>
+                        <div class="competition-details">
+                            <h3 class="competition-name">Творческий конкурс "My English Stories"</h3>
+                            <p class="competition-description">На конкурс принимаются рассказы на английском языке.</p>
+                            <div class="competition-meta">
+                                <span>Участников: 41</span>
+                                <span>Рейтинг: 4.0</span>
+                            </div>
+                            <a href="competition.html" class="competition-button">Участвовать</a>
+                        </div>
+                    </div>
+                    <div class="competition-card">
+                        <div class="competition-image" style="background-image: url('https://thumbnails.genial.ly/5b351fcb20cbb60d10b07644/pdf/b85922a0-607c-43c4-982c-a9bf23973267.png');"></div>
+                        <div class="competition-details">
+                            <h3 class="competition-name">Творческий конкурс "My English Classroom”</h3>
+                            <p class="competition-description">На конкурс принимаются фотографии Вашего кабинета английского языка.</p>
+                            <div class="competition-meta">
+                                <span>Участников: 69</span>
+                                <span>Рейтинг: 4.2</span>
+                            </div>
+                            <a href="competition.html" class="competition-button">Участвовать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Поиск-->
+        <section class="search-section" id="search">
+            <div class="container">
+                <div class="search-container">
+                    <h2 class="search-title">Поиск конкурсов</h2>
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Введите название или описание конкурса">
+                        <button type="submit" class="search-button">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Авторизация-->
+        <section class="auth-section" id="start-free" >
+            <div class="container" id="authorization">
+                <h1 class="free-class">Познакомьтесь со школой</h1>
+                <h1 class="free-class2">посетив бесплатное пробное занаятие!</h1>
+                <h1 class="free-class">Вы узнаете про формат,</h1>
+                <h1 class="free-class2">а ребенок поделится эмоциями от урока.</h1>
+                <div class="auth-container">
+                    <h2 class="auth-title">Авторизация</h2>
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Введите email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" placeholder="Введите пароль">
+                        </div>
+                        <div class="auth-actions">
+                            <button type="submit" class="auth-button">Войти</button>
+                            <a href="#" class="auth-link">Забыли пароль?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Отзывы-->
+        <section class="reviews-section">
+            <div class="container">
+                <h2 class="reviews-title">Отзывы</h2>
+                <div class="reviews-slider">
+                    <div class="reviews-track">
+                        <div class="review">
+                            <div class="review-content">
+                                <div class="review-header">
+                                <div class="review-avatar"  style="background-image: url('https://e7.pngegg.com/pngimages/537/728/png-clipart-fox-drawing-art-fox-watercolor-painting-mammal.png');"></div>
+                                </div>
+                                <div class="review-author">Никита Л.</div>
+                                <p class="review-text">Участвовали в конкурсе "Spring creativity". Получили огромное удовольствие от участия.</p>
+                                <p class="data">18 июня 2024 <a href="competition.html" class="review-link">Конкурс</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-dots">
+                        <div class="reviews-dot active"></div>
+                        <div class="reviews-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Подписка на новости -->
+        <section class="subscribe-section">
+            <div class="container">
+                <div class="subscribe-container">
+                    <h2 class="subscribe-title">Подписаться на новости</h2>
+                    <form class="subscribe-form">
+                        <div class="form-group">
+                            <label for="subscribe-email">Email</label>
+                            <input type="email" id="subscribe-email">
+                        </div>
+                        <div class="subscribe-checkbox">
+                            <input type="checkbox" id="agree">
+                            <label for="agree">Я согласен на обработку персональных данных</label>
+                        </div>
+                        <button type="submit" class="subscribe-button">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подвал сайта -->
+        <footer id="contacts">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <div class="footer-contact">
+                            Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                        </div>
+                        <div class="footer-contact">
+                            Email: <a href="mailto:HELLO@school.ru">HELLO@school.ru</a>
+                        </div>
+                    </div>
+
+                     <div class="footer-logo">
+                        <img src="https://i.pinimg.com/736x/bd/da/dd/bddadd4979ebe4fa66d6155c65a24cdc.jpg">
+                    </div>
+
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="index-light.html">Главная-светлая</a></li>
+                            <li><a href="registration.html">Регистрация</a></li>
+                            <li><a href="competition.html">Конкурс</a></li>
+                            <li><a href="account.html">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </body>
+</html>
